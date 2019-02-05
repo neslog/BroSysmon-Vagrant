@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "neslog/Windows-BroSysmon"
-  config.vm.box_version = "0.1"
-   config.vm.network "private_network", :type => 'dhcp', :adapter => 1
+  config.vm.network "private_network", ip: "192.168.200.100", virtualbox__intnet: true, adapter: 1
+  config.vm.network "private_network", type: "dhcp", adapter: 2
 end
